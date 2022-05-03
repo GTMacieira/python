@@ -15,12 +15,39 @@ __________________________________________________________________________
 11 - (297 % 11)=11    #     11 - (343 % 11) = 9
 1 > 9 = 0             #
 Digito 1 = 0          #     Digito 2 = 9
+
 """
 
 CPF= input('Informe seu CPF (apenas números): ')
 
-sepCPF= CPF.split('')
-print(sepCPF[1])
+
+digito1 = 0
+digito2 = 0
+val1 = 0
+
+for r in range(10,1,-1):
+        val = (int(CPF[-r - 1]) * r)
+        val1 = val1 + val
+        
+if (11 - (val1 % 11)) > 9:
+        digito1 = 0
+else:
+        digito1 = (11 - (val1 % 11))
+
+#print(digito1)
+
+CPF2 = CPF[0 : 9] + str(digito1)
+#print(CPF)
+
+for r in range(9,1,-1):
+        val = (int(CPF2[-r - 1]) * r)
+        val1 = val1 + val
+
+CPF2 = CPF2 + str(digito2)
+
+if CPF2 == CPF:
+        print(f'O CPF {CPF2} é valido')
+else:
+        print(f'O CPF {CPF} não é valido')
+#print(40 + 18 + 56 + 28 + 54 + 35 + 28 + 6 + 16)
   
-  
-    
