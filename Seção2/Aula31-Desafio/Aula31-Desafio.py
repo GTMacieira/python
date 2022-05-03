@@ -49,5 +49,6 @@ if CPF2 == CPF:
         print(f'O CPF {CPF2} é valido')
 else:
         print(f'O CPF {CPF} não é valido')
+        
 #print(40 + 18 + 56 + 28 + 54 + 35 + 28 + 6 + 16)
   
