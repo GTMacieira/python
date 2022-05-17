@@ -13,10 +13,7 @@
     
 # func(1,2,3,4,5)
 
-def func(*args, **kwargs): '''kwargs são argumentos com palavras chave argumento = "...",
-                             args não exibem kwargs e visse e versa'''
+def func(*args, **kwargs): '''kwargs são argumentos com palavras chave argumento = "...",args não exibem kwargs e visse e versa'''                        
     args=list(args) #casting, caso contrario manteria-se uma tupla
     args[0]=20
     print(args)
-    
-func(1,2,3,4,5)
